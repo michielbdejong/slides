@@ -133,42 +133,6 @@
     </figure>
   </div>
 
-  <div class="slide" id="solid-logo">
-    <figure class="cover height">
-      <img src="images/solid-logo.svg" alt="[the Solid logo]" />
-    </figure>
-  </div>
-
-  <div class="slide" id="solid">
-    <h2>
-      Solid is geen bedrijf of organisatie.<br>
-      Solid is meer dan enkel software.
-    </h2>
-    <ul>
-      <li>
-        Solid is een ecosysteem.
-        <ul>
-          <li class="next">standaarden zorgen voor interoperabiliteit</li>
-        </ul>
-      </li>
-      <li>
-        Solid is een beweging.
-        <ul>
-          <li class="next">bouw diensten op een andere manier</li>
-        </ul>
-      </li>
-      <li>
-        Solid is een community.
-        <ul>
-          <li class="next">verschillende mensen, bedrijven, en organisaties</li>
-        </ul>
-      </li>
-    </ul>
-    <figure class="cover height">
-      <img class="faded" src="images/solid-logo.svg" alt="[the Solid logo]" />
-    </figure>
-  </div>
-
   <div class="slide" id="multiple-backends">
     <h2>
       Diensten met gedecentraliseerde data<br>
@@ -179,103 +143,80 @@
     </figure>
   </div>
 
-  <div class="slide" id="burgerprofiel">
-    <figure class="cover width margin">
-      <img src="images/burgerprofiel.jpg" alt="[schermafbeelding van Mijn Burgerprofiel]">
-    </figure>
-  </div>
-
-  <div class="slide" id="pilots">
+  <div class="slide" id="demo">
     <h2>
-      Via een aantal pilootprojecten<br>
-      tonen we het potentieel van Solid.
+      Demo time!
     </h2>
-    <ul>
-      <li>
-        Mijn Burgerprofiel
-        <ul>
-          <li>contactgegevens uit datakluis</li>
-        </ul>
-      </li>
-      <li>attesten</li>
-      <li>verenigingen</li>
-      <li>…</li>
-    </ul>
-  </div>
-
-  <div class="slide" id="vaults">
-    <h2>
-      Een eigen datakluis<br>
-      voor iedere burger.
-    </h2>
-    <ul>
+    <ol>
       <li class="next">
-        De overheid heeft wellicht geen ambitie<br>
-        om kluizenaanbieder te worden.
+        Identiteit
+        <!-- Sign up Alice at https://solid.community and Bob at https://inrupt.net,
+          show how Alice can use her webid to log in to https://generator.inrupt.app. -->
       </li>
       <li class="next">
-        Ieder jaar ontvangen burgers een basispakket<br>
-        water, gas en elektriciteit.
-        <ul>
-          <li>Waarom ook niet met data?</li>
-        </ul>
+        Opslag
+        <!-- Show how Alice can use the profile editor on https://generator.inrupt.app,
+          and data is stored on her pod. It's not imported from there, the app actually has no database! -->
       </li>
       <li class="next">
-        De overheid kan kluisaanbieders<br>
-        certificeren voor burgers.
+        Toegangs Controle
+        <!-- Show how Alice can use the text editor on https://generator.inrupt.app to read and write a text file
+          on her pod, then grant Bob access. Bob can connect with the same app, and edit the file on Alice's pod
+          (but unlike Alice he has no permission to grant anyone else access to it). At this point, you can nicely
+          see the three-way separation between Bob's identity at https://inrupt.net, Alice's storage at
+          https://solid.community, and the app Bob uses at https://generator.inrupt.app. This separation of concerns,
+          powered very simplistically by hyperlinks, URLs and DNS domain names, gives Solid its versatility. -->
       </li>
-    </ul>
-  </div>
-
-  <div class="text slide" id="kay">
-    <blockquote>
-      <p>
-        De beste manier om<br>
-        de toekomst te voorspellen<br>
-        is om ze uit te vinden.
-      </p>
-      <cite>Alan Kay</cite>
-    </blockquote>
-    <figure class="cover width">
-      <img class="faded" src="images/alan-kay.jpg" alt="[foto van Alan Kay]">
-      <figcaption>
-        ©2008 <a href="https://www.flickr.com/photos/jeanbaptisteparis/3098599318/">jeanbaptisteparis</a>
-      </figcaption>
-    </figure>
-  </div>
-
-  <div class="text slide" id="barlow">
-    <blockquote>
-      <p>
-        De beste manier om<br>
-        de toekomst uit te vinden<br>
-        is om ze te voorspellen.
-      </p>
-      <cite>John Perry Barlow</cite>
-    </blockquote>
-    <figure class="cover width">
-      <img class="faded" src="images/john-perry-barlow.jpg" alt="[foto van John Perry Barlow]">
-      <figcaption>
-        ©2007 <a href="https://www.flickr.com/photos/joi/835393447/">Joi Ito</a>
-      </figcaption>
-    </figure>
-  </div>
-
-  <div class="text slide" id="vault">
+      <li class="next">
+        Interop
+        <!-- Show how Alice can log in to https://poddit.app and store some bookmarks. The bookmarks are stored as
+          domain-specific RDF on Alice's pod. Then she can log in to an unrelated app, https://markbook.5apps.com,
+          and see those same bookmarks. Not only that, she can edit her bookmarks, and then switch back to poddit.
+          As a user, she has full control over her data, which lives on her pod, and not in any particular app.
+          She does not even need to click export or import when she wants to move freely between applications.
+          Thanks to the use of machine-readable structured RDF data, one app can read the data that another app wrote,
+          and be interoperable. -->
+      </li>
+      <li class="next">
+        Meldingen
+        <!-- Alice and Bob can play a game of TicTacToe using https://generator.inrupt.app, and when one makes a move,
+          the other receives a notification. You can see these notifications in the LDN inbox on the user's pod. -->
+      </li>
+    </ol>
     <figure class="cover height">
-      <img src="images/vault.jpg" alt="[foto van een bankkluis]">
+      <img class="faded" src="images/vault.jpg" alt="[foto van een bankkluis]">
       <figcaption>
         ©2013 <a href="https://www.flickr.com/photos/ninniane/8730950297">ninniane</a>
       </figcaption>
     </figure>
   </div>
-
-  <div class="title slide" id="end">
+  
+  <div class="slide" id="multiple-backends-2">
     <h2>
-      Burgers, diensten en data:<br>
-      een introductie tot Solid
+      Alle pods volgen de Solid spec.
     </h2>
-    <p class="author"><a href="https://twitter.com/michielbdejong">@michielbdejong</a></p>
+    <figure class="cover width margin">
+      <img src="images/multiple-backends.svg" alt="">
+    </figure>
+  </div>
+
+  <div class="slide" id="multiple-backends">
+    <h2>
+      Diensten integreren niet onderling<br>
+      maar <i>via</i> hun gebruikers.
+    </h2>
+    <figure class="cover width margin">
+      <img src="images/api-integration.png" alt="">
+    </figure>
+  </div>
+
+  <div class="slide" id="tim">
+    <h2>
+      Sir Tim Berners-Lee, uitvinder van het web
+    </h2>
+    <figure class="cover height">
+      <img src="images/Tim-Berners-Lee.jpg" alt="[Tim Berners-Lee]" />
+    </figure>
   </div>
 
   <footer>
