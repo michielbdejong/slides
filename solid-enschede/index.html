@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <title>Burgers, diensten en data: een introductie tot Solid</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+  <link rel="stylesheet" href="styles/screen-16x10.css">
+  <link rel="stylesheet" href="styles/custom.css">
+</head>
+<body class="shower list">
+  <header class="caption">
+    <h1>
+      Burgers, diensten en data:<br>
+      een introductie tot Solid
+    </h1>
+    <p>
+      <a href="https://michielbdejong.com/">Michiel de Jong</a>,
+      <a href="https://inrupt.com/">inrupt</a> –
+      <a href="https://solidproject.org/">Solid</a>
+    </p>
+    <p class="venue">
+      Digital We, Utrecht, 10 December 2019
+    </p>
+  </header>
+
+  <div class="title slide" id="title">
+    <h2>
+      Burgers, diensten en data:<br>
+      een introductie tot Solid
+    </h2>
+    <p class="author">Michiel de Jong</p>
+    <p class="affiliation">inrupt</p>
+  </div>
+
+  <div class="text slide" id="train">
+    <figure class="cover width">
+      <img src="images/train.jpg" alt="[een Belgische trein]">
+      <figcaption>
+        ©2015 <a href="https://www.flickr.com/photos/rhemkes/24129086382">Roel Hemkes</a>
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="text slide" id="choice">
+    <figure class="cover width">
+      <img src="images/choice.jpg" alt="[een kind in de supermarkt]">
+      <figcaption>
+        ©2018 <a href="https://www.flickr.com/photos/126435840@N03/43637479534/">Skyler King</a>
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="dark cover slide" id="walled-gardens">
+    <figure class="cover width">
+      <img src="images/walled-gardens.jpg">
+      <figcaption>
+        © David Simonds
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="slide" id="centralization-consequences">
+    <h2>
+      Centralisatie heeft negatieve gevolgen<br>
+      voor innovatie en keuze.
+    </h2>
+    <ul>
+      <li class="next">
+        Welke integraties bouwen we?
+        <ul>
+          <li>
+            Laten we burgers inloggen met Facebook?
+          </li>
+        </ul>
+      </li>
+      <li class="next">
+        Ontwikkelaars hangen af van centrale platformen<br>
+        voor data en identiteit.
+        <ul class="next">
+          <li>…of ze moeten zelf zo’n platform starten.</li>
+        </ul>
+      </li>
+      <li class="next">
+        Mensen zijn controle over hun data kwijt<br>
+        en kunnen niet navigeren tussen diensten.
+      </li>
+    </ul>
+  </div>
+
+  <div class="text slide" id="summary">
+    <p>
+      Solid ontkoppelt data van diensten.
+    </p>
+    <p class="next">
+      Solid laat mensen diensten gebruiken
+      maar zelf kiezen waar ze data opslaan.
+    </p>
+    <p class="next">
+      Burgers behouden de controle<br>
+      over hun eigen data en<br>
+      delen selectief naar keuze.
+    </p>
+  </div>
+
+  <div class="slide" id="decentralized-data">
+    <h2>
+      Burgers bepalen zelf waar<br>
+      ze elk stukje data opslaan.
+    </h2>
+    <figure class="cover height margin">
+      <img src="images/decentralized-data.svg" alt="">
+    </figure>
+  </div>
+
+  <div class="slide" id="views">
+    <h2>
+      Burgers geven diensten toegang<br>
+      tot specifieke delen van hun data.
+    </h2>
+    <figure class="cover width margin">
+      <img src="images/apps-as-views.svg" alt="">
+    </figure>
+  </div>
+
+  <div class="slide" id="markets">
+    <h2>
+      Data scheiden van diensten<br>
+      zorgt voor vrije toegankelijkheid.
+    </h2>
+    <figure class="cover width margin">
+      <img src="images/data-and-app-markets.svg" alt="">
+    </figure>
+  </div>
+
+  <div class="slide" id="multiple-backends">
+    <h2>
+      Diensten met gedecentraliseerde data<br>
+      vergen een andere aanpak.
+    </h2>
+    <figure class="cover width margin">
+      <img src="images/multiple-backends.svg" alt="">
+    </figure>
+  </div>
+
+  <div class="slide" id="demo">
+    <h2>
+      Demo time!
+    </h2>
+    <ol>
+      <li class="next">
+        Identiteit
+        <!-- Sign up Alice at https://solid.community and Bob at https://inrupt.net,
+          show how Alice can use her webid to log in to https://generator.inrupt.app. -->
+      </li>
+      <li class="next">
+        Opslag
+        <!-- Show how Alice can use the profile editor on https://generator.inrupt.app,
+          and data is stored on her pod. It's not imported from there, the app actually has no database! -->
+      </li>
+      <li class="next">
+        Toegangs Controle
+        <!-- Show how Alice can use the text editor on https://generator.inrupt.app to read and write a text file
+          on her pod, then grant Bob access. Bob can connect with the same app, and edit the file on Alice's pod
+          (but unlike Alice he has no permission to grant anyone else access to it). At this point, you can nicely
+          see the three-way separation between Bob's identity at https://inrupt.net, Alice's storage at
+          https://solid.community, and the app Bob uses at https://generator.inrupt.app. This separation of concerns,
+          powered very simplistically by hyperlinks, URLs and DNS domain names, gives Solid its versatility. -->
+      </li>
+      <li class="next">
+        Interop
+        <!-- Show how Alice can log in to https://poddit.app and store some bookmarks. The bookmarks are stored as
+          domain-specific RDF on Alice's pod. Then she can log in to an unrelated app, https://markbook.5apps.com,
+          and see those same bookmarks. Not only that, she can edit her bookmarks, and then switch back to poddit.
+          As a user, she has full control over her data, which lives on her pod, and not in any particular app.
+          She does not even need to click export or import when she wants to move freely between applications.
+          Thanks to the use of machine-readable structured RDF data, one app can read the data that another app wrote,
+          and be interoperable. -->
+      </li>
+      <li class="next">
+        Meldingen
+        <!-- Alice and Bob can play a game of TicTacToe using https://generator.inrupt.app, and when one makes a move,
+          the other receives a notification. You can see these notifications in the LDN inbox on the user's pod. -->
+      </li>
+    </ol>
+    <figure class="cover height">
+      <img class="faded" src="images/vault.jpg" alt="[foto van een bankkluis]">
+      <figcaption>
+        ©2013 <a href="https://www.flickr.com/photos/ninniane/8730950297">ninniane</a>
+      </figcaption>
+    </figure>
+  </div>
+  
+  <div class="slide" id="multiple-backends-2">
+    <h2>
+      Alle pods volgen de Solid spec.
+    </h2>
+    <figure class="cover width margin">
+      <img src="images/multiple-backends.svg" alt="">
+    </figure>
+  </div>
+
+  <div class="slide" id="multiple-backends">
+    <h2>
+      Diensten integreren niet onderling<br>
+      maar <i>via</i> hun gebruikers.
+    </h2>
+    <figure class="cover width margin">
+      <img src="images/api-integration.png" alt="">
+    </figure>
+  </div>
+
+  <div class="slide" id="tim">
+    <h2>
+      Sir Tim Berners-Lee, uitvinder van het web
+    </h2>
+    <figure class="cover height">
+      <img src="images/Tim-Berners-Lee.jpg" alt="[Tim Berners-Lee]" />
+    </figure>
+  </div>
+
+  <footer>
+    <p class="badge"><a href="https://github.com/michielbdejong/slides-digital-we/">View on GitHub</a></p>
+    <p class="license">
+      These slides were based on
+      <a href="https://github.com/rubenverborgh/Nocturne-Informatie-Vlaanderen-2019/">Ruben Verborgh's Dutch-language Solid slides</a>.
+      ©2019 <a href="https://michielbdejong.com/">Michiel de Jong</a> –
+      Except where otherwise noted,
+      the content of these slides is
+      licensed under <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0</a>.
+    </p>
+  </footer>
+  <script src="scripts/shower.min.js"></script>
+  <script async src="//platform.twitter.com/widgets.js"></script>
+</body>
+</html>
